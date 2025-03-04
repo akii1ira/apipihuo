@@ -46,7 +46,6 @@ const planets = [
 app.get('/api/planets', (req, res) => {
   res.json(planets);
 });
-
 app.get('/api/planets/:name', (req, res) => {
   const planet = planets.find(p => p.name.toLowerCase() === req.params.name.toLowerCase());
   if (planet) {
